@@ -1,33 +1,17 @@
 import React from 'react'
 
-export default function BookItem({ book }) {
-  return (
-    <div className="flex gap-12 items-center w-[90vw] mx-auto">
-      
-      {/* Image */}
-      <div className="shrink-0">
-        <img
-          src={book.image}
-          alt={book.title}
-          className="w-[420px] h-[260px] object-cover rounded-lg"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="max-w-[650px]">
-        <h2 className="text-[24px] font-semibold mb-3">
-          {book.title}
-        </h2>
-
-        <p className="text-[16px] text-gray-700 mb-4">
-          {book.description}
-        </p>
-
-        <button className="px-5 py-2 bg-[#0B2C4D] text-white rounded-full">
-          Learn More
-        </button>
-      </div>
-
-    </div>
-  )
-}
+export default function BookItem({ book, index, id }) { 
+  const bookId = typeof id !== 'undefined' ? id : book?.id ?? index
+    return ( <article className="flex flex-col md:flex-row gap-8 md:items-start"> 
+      {/* IMAGE BLOCK */} 
+      <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-[220px]"> 
+        <Link to={/books/${bookId}}>
+        <img src={book.img} alt={book.title} className=" w-[200px] h-[280px] object-cover rounded-md shadow-sm " /> 
+      </Link> </div> {/* TEXT BLOCK */} 
+  <div className="flex-1 text-left">
+        <h2 className="text-2xl font-semibold mb-2"> 
+          <Link to={/books/${bookId}} className="hover:underline">
+          {book.title} </Link> 
+  </h2> <p className="text-gray-700 mb-4 max-w-3xl"> {book.desc} </p>
+    <Link to={/books/${bookId}} className="btn"> Learn More </Link> 
+  </div> </article> ) }
