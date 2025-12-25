@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BookItem({ book }) {
   return (
-    <div className="flex gap-12 items-start w-[90vw] mx-auto">
+    <div className="flex gap-12 items-center w-[90vw] mx-auto">
       
       {/* Image */}
       <div className="shrink-0">
