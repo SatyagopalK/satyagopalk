@@ -10,7 +10,7 @@ export default function Header() {
 
                 {/* LEFT: LOGO */}
                 <div className="text-xl font-semibold z-10">
-                    FiguringOut
+                    ExploringWhy?
                 </div>
 
                 {/* CENTER: ARTICLES → CONTACT (DESKTOP ONLY) */}
