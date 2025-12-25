@@ -32,8 +32,3 @@ export default function Research({ name }) {
 
         </div>
     )
-        </section>
-      </main>
-    </div>
-  )
-}
