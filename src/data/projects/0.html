@@ -20,28 +20,27 @@
             padding: 0;
         }
 
-       .container {
-    max-width: 900px;
-    margin: 32px auto;
-    padding: 0 16px;
-}
+        .container {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
 
         a {
-    color: #174ea6;          /* Blue */
-    text-decoration: underline;
-}
+            color: #174ea6;
+            text-decoration: underline;
+        }
 
-a:hover {
-    color: #174ea6;          /* Slightly darker blue on hover */
-}
+        a:hover {
+            color: #174ea6;
+        }
 
-/* Tablet & Desktop */
-@media (min-width: 768px) {
-    .container {
-        margin: 48px auto;
-        padding: 0 24px;
-    }
-}
+        @media (min-width: 768px) {
+            .container {
+                margin: 48px auto;
+                padding: 0 24px;
+            }
+        }
 
         h1 {
             font-size: 38px;
@@ -56,19 +55,17 @@ a:hover {
         }
 
         p {
-    font-size: 16px;
-    margin: 18px 0;
-    text-align: left;
-    line-height: 1.7;
-}
+            font-size: 16px;
+            margin: 18px 0;
+            text-align: left;
+            line-height: 1.7;
+        }
 
-/* Desktop & larger screens */
-@media (min-width: 768px) {
-    p {
-        font-size: 18px;
-    }
-}
-
+        @media (min-width: 768px) {
+            p {
+                font-size: 18px;
+            }
+        }
 
         ul {
             font-size: 20px;
@@ -90,14 +87,6 @@ a:hover {
             color: #000;
         }
 
-        blockquote {
-            border-left: 4px solid #ddd;
-            padding-left: 16px;
-            margin: 30px 0;
-            font-style: italic;
-            color: #444;
-        }
-
         .divider {
             margin: 56px 0;
             text-align: left;
@@ -114,151 +103,157 @@ a:hover {
             color: #555;
             margin-top: 12px;
         }
-
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
 <body>
 <div class="container">
 
-    <!-- ===== TITLE ===== -->
     <h1>Machine Learning for Early Cardiac Risk</h1>
 
-    <!-- ===== META ===== -->
     <div class="meta">
         <span class="author">Satya Gopal</span> · 12 min read
     </div>
 
-    <!-- ===== INTRODUCTION ===== -->
     <h2>Introduction</h2>
 
     <p>
-        When I first came across Machine Learning, my immediate curiosity was simple —
-        how do these systems actually work? Without revising mathematics or formally
-        studying machine learning algorithms, I jumped straight into building a project.
-        In hindsight, this decision made me uncomfortable later, but it also became one
-        of the most important learning experiences for me.
+        When I first came across Machine Learning, my immediate curiosity was simple — how do these systems actually work?
+        Without revising mathematics or formally studying machine learning algorithms, I jumped straight into building a project.
+        In hindsight, this decision made me uncomfortable later, but it also became one of the most important learning experiences for me.
     </p>
 
     <p>
-        The project, <em>“Machine Learning for Early Cardiac Risk”</em>, originated from
-        a friend’s idea. He suggested collaborating so that we could complement each
-        other’s strengths. He focused on understanding the problem domain, data, and
-        medical context, while I took responsibility for the technical side — exploring
-        machine learning models, implementation, and experimentation.
+        The project, “Machine Learning for Early Cardiac Risk,” originated from a friend’s idea.
+        He suggested collaborating so that we could complement each other’s strengths.
+        He focused on understanding the problem domain, data, and medical context,
+        while I took responsibility for the technical side — exploring machine learning models, implementation, and experimentation.
     </p>
 
     <p>
-        This division of roles allowed us to move forward effectively, and more
-        importantly, it pushed me to learn machine learning concepts through hands-on
-        problem solving rather than theory alone.
+        This division of roles allowed us to move forward effectively,
+        and more importantly, it pushed me to learn machine learning concepts through hands-on problem solving rather than theory alone.
     </p>
 
-    <!-- ===== PROBLEM STATEMENT ===== -->
     <h2>Problem Statement</h2>
 
     <p>
-        Cardiovascular diseases are among the leading causes of death worldwide, and
-        many heart conditions develop gradually without clear symptoms in the early
-        stages. Although patient clinical and lifestyle data are commonly available,
-        extracting meaningful patterns from this data to assess early cardiac risk
-        remains difficult using traditional methods.
+        Cardiovascular diseases are among the leading causes of death worldwide,
+        and many heart conditions develop gradually without clear symptoms in the early stages.
+        Although patient clinical and lifestyle data are commonly available,
+        extracting meaningful patterns from this data to assess early cardiac risk remains difficult using traditional methods.
+        This can delay timely medical intervention.
+        Therefore, there is a need for a data-driven approach that can effectively analyze patient health indicators
+        and support early identification of individuals who may be at risk of heart disease.
     </p>
 
-    <p>
-        This limitation can delay timely medical intervention. Therefore, there is a
-        need for a data-driven approach that can effectively analyze patient health
-        indicators and support early identification of individuals who may be at risk
-        of heart disease.
-    </p>
-
-    <!-- ===== TECHNICAL APPROACH ===== -->
     <h2>Technical Approach</h2>
 
     <p>
-        The primary challenge in this project was translating raw clinical and lifestyle
-        data into a form suitable for machine learning models. Patient datasets often
-        contain missing values, inconsistent scales, and features with varying levels
-        of importance, making direct model training unreliable.
+        The primary challenge in this project was to translate raw clinical and lifestyle data into a form
+        that could be effectively used by machine learning models.
+        Patient health datasets often contain missing values, varying scales,
+        and features with different levels of importance, making direct model training unreliable.
     </p>
 
     <p>
-        To address this, the process began with careful data preprocessing. This
-        included cleaning the dataset, handling missing values, and preparing
-        consistent input features. These steps ensured that the model learned meaningful
-        patterns rather than noise.
+        To address this, the approach began with careful data preprocessing to clean the dataset
+        and prepare consistent input features.
+        This step was essential to ensure that the model learned meaningful patterns
+        rather than noise or inconsistencies in the data.
     </p>
 
     <p>
-        The problem was framed as a supervised classification task, where the objective
-        was to distinguish between individuals at risk of heart disease and those
-        without significant risk. Emphasis was placed on interpretability and evaluation
-        to ensure that predictions were reliable and generalized across different data
-        samples.
+        Once the data was prepared, the problem was framed as a supervised classification task,
+        where the goal was to distinguish between individuals at risk of heart disease
+        and those without significant risk.
+        Machine learning models were then applied to learn relationships
+        between health indicators and cardiac risk outcomes.
     </p>
 
-    <!-- ===== METHODOLOGY ===== -->
+    <p>
+        Throughout this process, emphasis was placed on interpretability and evaluation,
+        ensuring that the predictions were not only accurate but also reliable across different data samples.
+        This step-by-step approach allowed the model to capture complex patterns
+        in patient data while maintaining generalization and robustness.
+    </p>
+
     <h2>Methodology</h2>
 
     <p>
-        Like many beginners, I initially selected popular machine learning algorithms
-        without fully understanding the dataset or the nature of the problem. A small
-        dataset with around 100 rows and 10 features was used, and multiple algorithms
-        were trained directly.
+        Like many beginners, I initially approached this project by searching for popular and widely discussed
+        machine learning algorithms rather than starting from the actual problem.
+        Without fully understanding the dataset or the nature of the task,
+        I selected a small dataset containing around 100 rows and 10 features
+        and directly trained multiple algorithms on it.
     </p>
 
     <p>
-        The results initially appeared impressive, with accuracy and F1-scores exceeding
-        95%. However, as I later learned through structured study via the CampusX
-        machine learning lecture series, high accuracy alone does not guarantee a
-        meaningful or reliable model.
+        The results appeared impressive at first,
+        with accuracy and F1-scores exceeding 95%.
+        At that stage, I assumed the project was complete and even pushed the work to GitHub.
+        However, this confidence was short-lived,
+        as my underlying goal was not just to complete a project,
+        but to genuinely understand how machine learning works.
     </p>
 
     <p>
-        We then sourced a more realistic dataset from Kaggle containing over 10,000
-        records and 22 clinical and lifestyle features. Before training, the dataset
-        was analyzed for class imbalance, missing values, and feature relevance.
+        As I began structured learning through the CampusX machine learning lecture series,
+        I revisited this project and realized how critical the dataset and problem formulation actually were.
+        I understood that high accuracy alone does not guarantee a meaningful model,
+        especially when the dataset is small or poorly analyzed.
     </p>
 
     <p>
-        Appropriate classification models were selected, including Logistic Regression,
-        Support Vector Classifier, K-Nearest Neighbors, Random Forest, and Gaussian
-        Naive Bayes. These models were evaluated using precision, recall, F1-score,
-        accuracy, and confusion matrices.
+        With this realization, I collaborated with my friend to source a more realistic
+        and comprehensive dataset from Kaggle.
+        This dataset contained over 10,000 records with 22 clinical and lifestyle features.
+        Before training any models, I focused on understanding the data
+        by checking for class imbalance, missing values, and the relevance of individual features.
     </p>
 
     <p>
-        Later, an ensemble voting classifier was implemented by combining the
-        top-performing models, leading to more stable and realistic performance.
+        Through this analysis, the problem was correctly identified as a classification task.
+        Based on this, appropriate classification algorithms were selected,
+        including Logistic Regression, Support Vector Classifier, K-Nearest Neighbors,
+        Random Forest, and Gaussian Naive Bayes.
+        These models were trained using the processed dataset
+        and evaluated using standard classification metrics such as precision,
+        recall, F1-score, accuracy, and the confusion matrix.
     </p>
 
-    <!-- ===== RESULTS ===== -->
+    <p>
+        Later, while learning about ensemble techniques,
+        I explored the use of a voting classifier by combining the top-performing individual models.
+        This approach provided a more balanced and realistic evaluation of model performance,
+        with results ranging between 87% and 90%,
+        reflecting improved generalization compared to the initial naive experiments.
+    </p>
+
     <h2>Results and Evaluation</h2>
 
     <p>
-        Model evaluation focused on multiple metrics rather than accuracy alone.
-        Precision measured the reliability of high-risk predictions, recall captured
-        the ability to identify truly at-risk patients, and the F1-score balanced both.
+        Model performance was evaluated using multiple classification metrics rather than accuracy alone.
+        During early experimentation, high accuracy initially appeared promising,
+        but deeper analysis showed that accuracy by itself failed to reflect
+        how well high-risk cardiac cases were being identified.
     </p>
 
     <p>
-        Individual models showed consistent performance, but no single model dominated
-        across all metrics. The voting classifier achieved overall performance in the
-        range of 87% to 90%, reflecting improved generalization compared to early naive
-        experiments.
+        Precision, recall, and F1-score were therefore used alongside accuracy.
+        Precision measured the reliability of high-risk predictions,
+        while recall captured the model’s ability to identify truly at-risk patients.
+        The F1-score provided a balanced comparison across models.
+        Confusion matrices were also analyzed
+        to explicitly examine false positives and false negatives.
     </p>
 
     <p>
-        The confusion matrix of the voting classifier provides insight into prediction
-        behavior by explicitly highlighting false positives and false negatives.
+        Across individual models—Logistic Regression, Support Vector Classifier,
+        K-Nearest Neighbors, Random Forest, and Gaussian Naive Bayes—performance was consistent,
+        though no single model dominated across all metrics.
+        To improve robustness, a voting classifier combining the top-performing models was evaluated.
+        This ensemble achieved overall performance scores in the range of 87% to 90%.
     </p>
 
     <div class="figure">
@@ -266,26 +261,31 @@ a:hover {
     </div>
 
     <div class="divider"></div>
+
     <img
-            src="https://raw.githubusercontent.com/SatyagopalK/SatyagopalK.github.io/master/assets/images/image_1.jpg"
-            alt="img"
+        src="https://raw.githubusercontent.com/SatyagopalK/satyagopalk/blob/master/src/data/images/img_2.png"
+        alt="Confusion Matrix"
     />
 
-    <!-- ===== FINAL THOUGHTS ===== -->
     <h2>Final Thoughts</h2>
 
     <p>
-        This project began as an experiment driven by curiosity and gradually evolved
-        into a structured exploration of machine learning for real-world healthcare
-        applications. More than the final scores, the value of this work lies in the
-        learning process — recognizing early mistakes, refining assumptions, and
-        developing a disciplined evaluation mindset.
+        This project began as an experiment driven by curiosity
+        and gradually evolved into a structured exploration of machine learning
+        for real-world risk prediction.
+        More than the final scores,
+        the value of this project lies in the learning process—recognizing early mistakes,
+        refining assumptions, and developing a more disciplined approach.
     </p>
 
     <p>
-        The complete implementation, including the voting classifier, Streamlit-based
-        application, and source code, is available in the GitHub repository. The Kaggle
-        dataset used is also linked for transparency and reproducibility.
+        The complete implementation of this work,
+        including the trained voting classifier,
+        the Streamlit-based interactive application,
+        and all supporting code,
+        is available in the GitHub repository.
+        The dataset used for this project was sourced from Kaggle
+        and is also linked below for transparency and reproducibility.
     </p>
 
     <p><strong>Project Resources:</strong></p>
@@ -306,8 +306,9 @@ a:hover {
 
     <p>
         This project serves as a foundation for deeper exploration into machine learning
-        and healthcare, reflecting an ongoing effort to build systems that are not only
-        accurate, but also meaningful and responsible.
+        and healthcare applications,
+        and it reflects an ongoing effort to build systems
+        that are not only accurate, but also meaningful and responsible.
     </p>
 
 </div>
