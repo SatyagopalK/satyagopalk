@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Machine Learning: An Intuitive Introduction</title>
+
+    <meta
+            name="description"
+            content="An intuitive, beginner-friendly introduction to Machine Learning, its types, learning approaches, and real-world challenges."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #ffffff;
+            color: #242424;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding:;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 18px 0;
+        }
+
+        ul {
+            font-size: 20px;
+            margin: 18px 0 18px 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            color: #6b6b6b;
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        .author {
+            font-weight: bold;
+            color: #000;
+        }
+
+        blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        .divider {
+            margin: 50px 0;
+            text-align: center;
+            color: #aaa;
+        }
+
+        .divider::before {
+            content: "• • •";
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- ===== TITLE ===== -->
+    <h1>Machine Learning</h1>
+
+    <!-- ===== META ===== -->
+    <div class="meta">
+        <span class="author">Satya Gopal</span> · 10 min read
+    </div>
+
+    <!-- ===== INTRO ===== -->
+    <p>
+        When people talk about Artificial Intelligence, they define it in many ways —
+        acting like humans, thinking like humans, or behaving rationally. When I first
+        encountered these definitions, they felt important but distant. Yet one idea
+        kept repeating itself: intelligence is about making the right decisions.
+    </p>
+
+    <p>
+        As I learned more, I realized that Machine Learning is one of the most practical
+        ways to achieve this intelligence. Instead of writing every rule by hand, we
+        show machines data and allow them to learn from it.
+    </p>
+
+    <p>
+        Like most students, I memorized definitions by Arthur Samuel and Tom Mitchell
+        during my undergraduate days just to clear exams. It was only after working on
+        small projects that something clicked — machine learning wasn’t really about
+        definitions or formulas. It was about patterns.
+    </p>
+
+    <blockquote>
+        Machine learning looks at data the way a child looks at pictures first — trying
+        to understand the story before reading the words.
+    </blockquote>
+
+    <p>
+        To understand whether these patterns are meaningful, we evaluate them using
+        metrics. With this perspective, those famous definitions finally started to
+        make sense — not as exam answers, but as intuitive explanations.
+    </p>
+
+    <h2>Types of Machine Learning</h2>
+
+    <p>
+        Before discussing the types of machine learning, I’d like to acknowledge
+        Aurélien Géron, whose work helped me understand how learning approaches are used
+        in real-world systems.
+    </p>
+
+    <p>
+        Most books and tutorials mention four major types — Supervised Learning,
+        Unsupervised Learning, Semi-Supervised Learning, and Reinforcement Learning.
+        While these categories are important, it’s even more useful to understand how
+        they differ in practice.
+    </p>
+
+    <h2>Based on the Amount of Supervision Given</h2>
+
+    <p>
+        One simple way to classify machine learning systems is by looking at how much
+        supervision is provided during training.
+    </p>
+
+    <h2>Supervised Learning</h2>
+
+    <p>
+        Think of solving a math problem in school. You are given the question and the
+        correct answer. Your task is to figure out the steps connecting the two.
+    </p>
+
+    <p>
+        Supervised learning works the same way. The algorithm is trained using labeled
+        data — inputs paired with correct outputs. Once trained, the model can predict
+        outcomes for unseen data.
+    </p>
+
+    <p><strong>Real-world examples:</strong></p>
+    <ul>
+        <li>Email spam detection</li>
+        <li>House price prediction</li>
+    </ul>
+
+    <p><strong>Common algorithms:</strong></p>
+    <ul>
+        <li>Linear Regression</li>
+        <li>Logistic Regression</li>
+    </ul>
+
+    <h2>Unsupervised Learning</h2>
+
+    <p>
+        Imagine being given a notebook full of questions but no answers. Your task is
+        to observe patterns, group similar questions, and find structure on your own.
+    </p>
+
+    <p>
+        In unsupervised learning, the algorithm receives unlabeled data and tries to
+        discover hidden patterns or relationships.
+    </p>
+
+    <p><strong>Real-world examples:</strong></p>
+    <ul>
+        <li>Customer segmentation</li>
+        <li>Clustering news articles by topic</li>
+    </ul>
+
+    <p><strong>Common algorithms:</strong></p>
+    <ul>
+        <li>K-Means Clustering</li>
+        <li>Hierarchical Clustering</li>
+    </ul>
+
+    <h2>Semi-Supervised Learning</h2>
+
+    <p>
+        Semi-supervised learning lies between supervised and unsupervised learning. A
+        small portion of data is labeled, while the rest is unlabeled.
+    </p>
+
+    <p>
+        This approach is especially useful when labeling data is expensive or
+        time-consuming.
+    </p>
+
+    <p><strong>Real-world examples:</strong></p>
+    <ul>
+        <li>Image classification with limited labeled data</li>
+        <li>Speech recognition systems</li>
+    </ul>
+
+    <h2>Reinforcement Learning</h2>
+
+    <p>
+        Reinforcement learning is learning through experience — like learning to ride
+        a bicycle. You try, fail, adjust, and improve over time.
+    </p>
+
+    <p>
+        An agent interacts with an environment and receives rewards or penalties. The
+        goal is to maximize long-term rewards.
+    </p>
+
+    <p><strong>Real-world examples:</strong></p>
+    <ul>
+        <li>Game-playing systems like AlphaGo</li>
+        <li>Robots learning to walk</li>
+    </ul>
+
+    <h2>Batch and Online Learning</h2>
+
+    <p>
+        Machine learning systems can also be categorized based on how they learn from
+        incoming data.
+    </p>
+
+    <h2>Instance-Based vs Model-Based Learning</h2>
+
+    <p>
+        Instance-based learning relies on memorization and similarity, while
+        model-based learning focuses on understanding underlying patterns and
+        generalization.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Main Challenges of Machine Learning</h2>
+
+    <ul>
+        <li>Choosing the right algorithm</li>
+        <li>Insufficient data</li>
+        <li>Non-representative datasets</li>
+        <li>Poor data quality</li>
+        <li>Irrelevant features</li>
+    </ul>
+
+    <h2>Final Thoughts</h2>
+
+    <p>
+        Machine learning is like teaching a child who knows nothing at first. Confusion
+        is natural. What we’ve discussed here is just the beginning.
+    </p>
+
+    <p>
+        AI and ML continue to evolve through the efforts of researchers and engineers
+        worldwide — and that ongoing curiosity is what drives progress.
+    </p>
+
+</div>
+</body>
+</html>

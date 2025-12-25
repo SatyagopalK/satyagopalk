@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Machine Learning for Early Cardiac Risk</title>
+
+    <meta
+            name="description"
+            content="A practical exploration of using Machine Learning for early cardiac risk prediction, focusing on data understanding, model selection, and evaluation beyond accuracy."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #ffffff;
+            color: #242424;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 42px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 18px 0;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        ul {
+            font-size: 20px;
+            margin: 18px 0 18px 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: #6b6b6b;
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        .author {
+            font-weight: bold;
+            color: #000;
+        }
+
+        blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        .divider {
+            margin: 56px 0;
+            text-align: center;
+            color: #aaa;
+        }
+
+        .divider::before {
+            content: "• • •";
+        }
+
+        .figure {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-top: 12px;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- ===== TITLE ===== -->
+    <h1>Machine Learning for Early Cardiac Risk</h1>
+
+    <!-- ===== META ===== -->
+    <div class="meta">
+        <span class="author">Satya Gopal</span> · 12 min read
+    </div>
+
+    <!-- ===== INTRODUCTION ===== -->
+    <h2>Introduction</h2>
+
+    <p>
+        When I first came across Machine Learning, my immediate curiosity was simple —
+        how do these systems actually work? Without revising mathematics or formally
+        studying machine learning algorithms, I jumped straight into building a project.
+        In hindsight, this decision made me uncomfortable later, but it also became one
+        of the most important learning experiences for me.
+    </p>
+
+    <p>
+        The project, <em>“Machine Learning for Early Cardiac Risk”</em>, originated from
+        a friend’s idea. He suggested collaborating so that we could complement each
+        other’s strengths. He focused on understanding the problem domain, data, and
+        medical context, while I took responsibility for the technical side — exploring
+        machine learning models, implementation, and experimentation.
+    </p>
+
+    <p>
+        This division of roles allowed us to move forward effectively, and more
+        importantly, it pushed me to learn machine learning concepts through hands-on
+        problem solving rather than theory alone.
+    </p>
+
+    <!-- ===== PROBLEM STATEMENT ===== -->
+    <h2>Problem Statement</h2>
+
+    <p>
+        Cardiovascular diseases are among the leading causes of death worldwide, and
+        many heart conditions develop gradually without clear symptoms in the early
+        stages. Although patient clinical and lifestyle data are commonly available,
+        extracting meaningful patterns from this data to assess early cardiac risk
+        remains difficult using traditional methods.
+    </p>
+
+    <p>
+        This limitation can delay timely medical intervention. Therefore, there is a
+        need for a data-driven approach that can effectively analyze patient health
+        indicators and support early identification of individuals who may be at risk
+        of heart disease.
+    </p>
+
+    <!-- ===== TECHNICAL APPROACH ===== -->
+    <h2>Technical Approach</h2>
+
+    <p>
+        The primary challenge in this project was translating raw clinical and lifestyle
+        data into a form suitable for machine learning models. Patient datasets often
+        contain missing values, inconsistent scales, and features with varying levels
+        of importance, making direct model training unreliable.
+    </p>
+
+    <p>
+        To address this, the process began with careful data preprocessing. This
+        included cleaning the dataset, handling missing values, and preparing
+        consistent input features. These steps ensured that the model learned meaningful
+        patterns rather than noise.
+    </p>
+
+    <p>
+        The problem was framed as a supervised classification task, where the objective
+        was to distinguish between individuals at risk of heart disease and those
+        without significant risk. Emphasis was placed on interpretability and evaluation
+        to ensure that predictions were reliable and generalized across different data
+        samples.
+    </p>
+
+    <!-- ===== METHODOLOGY ===== -->
+    <h2>Methodology</h2>
+
+    <p>
+        Like many beginners, I initially selected popular machine learning algorithms
+        without fully understanding the dataset or the nature of the problem. A small
+        dataset with around 100 rows and 10 features was used, and multiple algorithms
+        were trained directly.
+    </p>
+
+    <p>
+        The results initially appeared impressive, with accuracy and F1-scores exceeding
+        95%. However, as I later learned through structured study via the CampusX
+        machine learning lecture series, high accuracy alone does not guarantee a
+        meaningful or reliable model.
+    </p>
+
+    <p>
+        We then sourced a more realistic dataset from Kaggle containing over 10,000
+        records and 22 clinical and lifestyle features. Before training, the dataset
+        was analyzed for class imbalance, missing values, and feature relevance.
+    </p>
+
+    <p>
+        Appropriate classification models were selected, including Logistic Regression,
+        Support Vector Classifier, K-Nearest Neighbors, Random Forest, and Gaussian
+        Naive Bayes. These models were evaluated using precision, recall, F1-score,
+        accuracy, and confusion matrices.
+    </p>
+
+    <p>
+        Later, an ensemble voting classifier was implemented by combining the
+        top-performing models, leading to more stable and realistic performance.
+    </p>
+
+    <!-- ===== RESULTS ===== -->
+    <h2>Results and Evaluation</h2>
+
+    <p>
+        Model evaluation focused on multiple metrics rather than accuracy alone.
+        Precision measured the reliability of high-risk predictions, recall captured
+        the ability to identify truly at-risk patients, and the F1-score balanced both.
+    </p>
+
+    <p>
+        Individual models showed consistent performance, but no single model dominated
+        across all metrics. The voting classifier achieved overall performance in the
+        range of 87% to 90%, reflecting improved generalization compared to early naive
+        experiments.
+    </p>
+
+    <p>
+        The confusion matrix of the voting classifier provides insight into prediction
+        behavior by explicitly highlighting false positives and false negatives.
+    </p>
+
+    <div class="figure">
+        Fig-1: Confusion Matrix of Voting Classifier
+    </div>
+
+    <div class="divider"></div>
+    <img
+            src="https://raw.githubusercontent.com/SatyagopalK/SatyagopalK.github.io/master/assets/images/image_1.jpg"
+            alt="img"
+    />
+
+    <!-- ===== FINAL THOUGHTS ===== -->
+    <h2>Final Thoughts</h2>
+
+    <p>
+        This project began as an experiment driven by curiosity and gradually evolved
+        into a structured exploration of machine learning for real-world healthcare
+        applications. More than the final scores, the value of this work lies in the
+        learning process — recognizing early mistakes, refining assumptions, and
+        developing a disciplined evaluation mindset.
+    </p>
+
+    <p>
+        The complete implementation, including the voting classifier, Streamlit-based
+        application, and source code, is available in the GitHub repository. The Kaggle
+        dataset used is also linked for transparency and reproducibility.
+    </p>
+
+    <p><strong>Project Resources:</strong></p>
+    <ul>
+        <li>
+            GitHub Repository:
+            <a href="https://github.com/SatyagopalK/-Predictive-Analytics-for-Heart-Disease-Using-Machine-Learning">
+                Predictive Analytics for Heart Disease
+            </a>
+        </li>
+        <li>
+            Dataset:
+            <a href="https://www.kaggle.com/datasets/oktayrdeki/heart-disease">
+                Kaggle Heart Disease Dataset
+            </a>
+        </li>
+    </ul>
+
+    <p>
+        This project serves as a foundation for deeper exploration into machine learning
+        and healthcare, reflecting an ongoing effort to build systems that are not only
+        accurate, but also meaningful and responsible.
+    </p>
+
+</div>
+</body>
+</html>
