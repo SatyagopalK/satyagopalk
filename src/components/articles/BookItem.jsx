@@ -11,7 +11,7 @@ export default function BookItem({ book, index, id }) {
     <article className="flex flex-col md:flex-row gap-8 md:items-start">
 
       {/* IMAGE BLOCK */}
-      <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-[240px]">
+      <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-[220px]">
         <Link to={`/books/${bookId}`}>
           <img
             src={book.img}
