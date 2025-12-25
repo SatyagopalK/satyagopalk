@@ -10,7 +10,7 @@ export default function Research({ name }) {
         <section className="py-12">
 
           {/* SAME CONTENT FRAME AS PROJECTS */}
-          <div className="mx-auto w-[85vw] max-w-5xl">
+          <div className="mb-[5vh] mt-[5vh] font-mont w-[90vw] mx-auto">
 
             <h1 className="text-[32px] font-bold mb-4">{name}</h1>
 
