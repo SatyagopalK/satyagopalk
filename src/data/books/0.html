@@ -21,11 +21,19 @@
             text-align: justify;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding:;
-        }
+       .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+    .container {
+        margin: 48px auto;
+        padding: 0 24px;
+    }
+}
 
         h1 {
             font-size: 38px;
@@ -35,14 +43,23 @@
 
         h2 {
             font-size: 26px;
-            margin-top: 40px;
+            margin-top: 42px;
             margin-bottom: 12px;
         }
 
         p {
-            font-size: 20px;
-            margin: 18px 0;
-        }
+    font-size: 16px;
+    margin: 18px 0;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* Desktop & larger screens */
+@media (min-width: 768px) {
+    p {
+        font-size: 18px;
+    }
+}
 
         ul {
             font-size: 20px;
