@@ -7,7 +7,7 @@ export default function BookItem({ book, index, id }){
     <article className="flex flex-col md:flex-row items-center gap-8 text-left">
       <div className="flex-shrink-0 w-full md:w-1/3">
         <Link to={`/books/${bookId}`}>
-          <img src={book.img} alt={book.title} className="w-full max-w-[100px] md:max-w-full" />
+          <img src={book.img} alt={book.title} className="w-full max-w-[240px] md:max-w-full" />
         </Link>
       </div>
       <div className="w-full md:w-2/3">
