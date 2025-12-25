@@ -5,33 +5,38 @@ export default function BookItem({ book, index, id }) {
   const bookId =
     typeof id !== 'undefined'
       ? id
-      : book && typeof book.id !== 'undefined'
-      ? book.id
-      : index
+      : book?.id ?? index
 
   return (
-    <article className="mx-auto flex flex-col md:flex-row gap-8 w-[85vw] md:items-start">
-      
-      {/* Image */}
-      <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-start">
+    <article className="flex flex-col md:flex-row gap-8 md:items-start">
+
+      {/* IMAGE BLOCK */}
+      <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-[220px]">
         <Link to={`/books/${bookId}`}>
           <img
             src={book.img}
             alt={book.title}
-            className="w-full max-w-[240px] md:max-w-[300px] h-auto rounded shadow-sm"
+            className="
+              w-[200px] h-[280px]
+              object-cover
+              rounded-md
+              shadow-sm
+            "
           />
         </Link>
       </div>
 
-      {/* Content */}
-      <div className="w-full md:w-2/3 text-left">
+      {/* TEXT BLOCK */}
+      <div className="flex-1 text-left">
         <h2 className="text-2xl font-semibold mb-2">
           <Link to={`/books/${bookId}`} className="hover:underline">
             {book.title}
           </Link>
         </h2>
 
-        <p className="text-gray-700 mb-4">{book.desc}</p>
+        <p className="text-gray-700 mb-4 max-w-3xl">
+          {book.desc}
+        </p>
 
         <Link to={`/books/${bookId}`} className="btn">
           Learn More
