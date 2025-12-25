@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <div className="min-h-screen bg-[#F9F7F2] text-[#1a1a1a] font-sans selection:bg-[#FFD666] text-justify">
+        <div className="min-h-screen bg-[#F9F7F2] text-[#1a1a1a] font-sans selection:bg-[#FFD666] text-left">
             {/* Main Content Container */}
             <main className="max-w-4xl mx-auto px-6 py-20">
                 {/* Header Section */}
